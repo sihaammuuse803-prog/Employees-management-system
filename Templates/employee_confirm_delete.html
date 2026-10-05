@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family:Arial;padding:30px;">
+    <h1>Ma hubtaa inaad tirtirto {{ emp }}?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Haa, tirtir</button>
+        <a href="{% url 'employee_list' %}">Maya</a>
+    </form>
+</body>
+</html>
