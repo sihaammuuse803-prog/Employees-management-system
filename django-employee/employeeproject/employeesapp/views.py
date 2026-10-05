@@ -59,3 +59,5 @@ def department_list(request):
     return render(request, 'department.html', {
         'departments': departments
     })
+
+    #commit 1
