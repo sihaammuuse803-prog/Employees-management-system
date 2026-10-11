@@ -27,6 +27,7 @@
 <body>
 
     <h1>Departments</h1>
+    <a href="{% url 'add_department' %}">+ Add Department</a>
 
     {% for department in departments %}
         <div class="department">

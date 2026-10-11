@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Positions</title>
+</head>
+<body>
+
+    <h1>Position Management</h1>
+
+    <a href="{% url 'add_position' %}">Add New Position</a>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Position Name</th>
+        </tr>
+
+        {% for position in positions %}
+        <tr>
+            <td>{{ position.id }}</td>
+            <td>{{ position.name }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No positions found.</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>

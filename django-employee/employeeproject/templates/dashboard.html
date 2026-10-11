@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
     <title>Employee Management System</title>
+      {% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
 
     <style>
         * {
@@ -87,10 +91,10 @@
     <a href="{% url 'dashboard' %}">Dashboard</a>
     <a href="{% url 'employee_list' %}">Employees</a>
     <a href="{% url 'department_list' %}">Departments</a>
-    <a href="#">Positions</a>
-    <a href="#">Attendance</a>
-    <a href="#">Salary</a>
-    <a href="#">Logout</a>
+    <a href="{% url 'position_list' %}">Positions</a>
+    <a href="{% url 'attendance_list' %}">Attendance</a>
+    <a href="{% url 'salary_list' %}">Salary</a>
+    <a href="{% url 'logout' %}">Logout</a>
 </div>
     <div class="main">
 

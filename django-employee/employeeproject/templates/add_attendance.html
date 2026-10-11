@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Attendance</title>
+</head>
+<body>
+
+    <h1>Record Attendance</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Employee:</label>
+        <select name="employee" required>
+            {% for employee in employees %}
+            <option value="{{ employee.id }}">
+                {{ employee.first_name }} {{ employee.last_name }}
+            </option>
+            {% endfor %}
+        </select>
+
+        <br><br>
+
+        <label>Date:</label>
+        <input type="date" name="date" required>
+
+        <br><br>
+
+        <label>Status:</label>
+        <select name="status">
+            <option value="Present">Present</option>
+            <option value="Absent">Absent</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">Save Attendance</button>
+
+    </form>
+
+</body>
+</html>
