@@ -37,7 +37,7 @@ class Attendance(models.Model):
         ('Absent', 'Absent'),
         ('Late', 'Late'),
     ]
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE)
+    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name='salary_records')
     date = models.DateField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Present')
 
